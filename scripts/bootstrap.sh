@@ -94,18 +94,18 @@ if [ -e /etc/alpine-release ]; then
 fi
 
 # Choose the vcpkg binary to download
-vcpkgToolReleaseTag="2021-10-21"
+vcpkgToolReleaseTag="2021-10-25"
 if [ "$(uname)" = "Darwin" ]; then
     echo "Downloading vcpkg-macos..."
-    vcpkgToolReleaseSha="bcd779043e892994a1a4bd7908f071a2801dfd1c9f5826bb4e24430e0878d4e695fc017575b2a45cfad199ef20c32c2ed619230e931018c14b5ac733e9abb4e6"
+    vcpkgToolReleaseSha="09bd5d6bab4d45952f43626562af3e959cb82c96324003f665b902ccf65f4600fa1f1e84cbd54ad1f6e390be99cde5b3a1e640a0c3280aface02fbd1e867773e"
     vcpkgToolName="vcpkg-macos"
 elif [ -e /etc/alpine-release -o "$vcpkgUseMuslC" = "ON" ]; then
     echo "Downloading vcpkg-muslc..."
-    vcpkgToolReleaseSha="aa3f15e62e3e0162ad9e33663be1875cd7440c5117b081580e8f05f45fadeb77cf3c465ceb8771496b4f48a40613c8fbb79bf6fa9b75c769b1f0bbf0b2693d83"
+    vcpkgToolReleaseSha="a598e37855f72841f3cd36a7b3f67d3cdc25f0577d851cd8dbdd5ff16190972ce5b9d0ca60c6e54ed147d1315bdedcd84005dfabc427fbdaee5b74726a351ec7"
     vcpkgToolName="vcpkg-muslc"
 else
     echo "Downloading vcpkg-glibc..."
-    vcpkgToolReleaseSha="7a2f6330748d60f29de4aaaaa9bbeaa7ca043661a9b050fbeec791bd2539a028b4f1a27b764b31a1f24c5b73df38e0beda0f16e64a0d1ae51fe75b2ec6e15922"
+    vcpkgToolReleaseSha="c8f40cf91512500176ce3f7569ec0c91cfc93693921fac2db04ce8af0a6b65bc9aca880b7ecc44223b814e894fef66147af321c45e1b75a8628a78d499c272a8"
     vcpkgToolName="vcpkg-glibc"
 fi
 
